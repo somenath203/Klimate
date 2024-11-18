@@ -1,5 +1,7 @@
 # Klimate
 
+---
+
 ## Demo video of the overall application
 
 ![Screenshot (795)](https://github.com/user-attachments/assets/bb8fefa5-ac00-42cd-8007-114b7cff0102)
