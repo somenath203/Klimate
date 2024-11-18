@@ -3,13 +3,13 @@ import { useFavouriteCity } from "@/hooks/use-favoruite-city";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import FavCityCard from "./FavCityCard";
 
-
 const FavCity = () => {
 
 
   const { favCities, removeParticularFav, removeAllFavCities } = useFavouriteCity();
 
-  if (!favCities.length) {
+  
+  if(!favCities.length) {
 
     return null;
 
@@ -21,18 +21,22 @@ const FavCity = () => {
 
       <h1 className="text-xl font-bold tracking-light">Favourites</h1>
 
-      <Button onClick={() => removeAllFavCities.mutate()}>Remove All Favourites</Button>
+      <Button 
+        onClick={() => removeAllFavCities.mutate()}
+      >Remove All Favourites</Button>
 
-      <ScrollArea className="w-full p-4 pt-2 pb-4">
+      <ScrollArea className="w-full pb-4">
 
-        <div className="flex gap-4 overflow-x-auto">
+        <div className="flex gap-4">
 
           {favCities?.length > 0 && favCities?.map((favCity) => (
-            <FavCityCard
-              key={favCity.id}
+
+            <FavCityCard 
+              key={favCity.id} 
               {...favCity}
               onRemoveFav={() => removeParticularFav.mutate(favCity.id)}
             />
+
           ))}
 
         </div>
@@ -40,9 +44,8 @@ const FavCity = () => {
       </ScrollArea>
 
     </>
-  );
+  )
 
 }
-
 
 export default FavCity;
