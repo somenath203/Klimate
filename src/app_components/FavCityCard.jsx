@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 import { Loader2, X } from "lucide-react";
 
@@ -29,7 +30,7 @@ const FavCityCard = ({ id, name, lat, lon, onRemoveFav }) => {
 
                 onRemoveFav(id);
 
-                toast.error(`removed ${name} from the favourites`);
+                toast.error(`removed from the favourites`);
 
             }}
         >

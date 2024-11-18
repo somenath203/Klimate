@@ -27,7 +27,7 @@ const FavouriteButton = ({ weatherData }) => {
 
         removeParticularFav.mutate(`${weatherData.coord.lat}-${weatherData.coord.lon}`);
 
-        toast.error(`removed ${weatherData.name} from the favourites`);
+        toast.error(`removed from the favourites`);
 
     } else {
 
@@ -38,7 +38,7 @@ const FavouriteButton = ({ weatherData }) => {
             country: weatherData.sys.country
         });
 
-        toast.success(`${weatherData.name} added to the favourites`);
+        toast.success(`added to the favourites`);
 
     }
 
