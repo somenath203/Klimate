@@ -25,7 +25,7 @@ const FavCity = () => {
         onClick={() => removeAllFavCities.mutate()}
       >Remove All Favourites</Button>
 
-      <ScrollArea className="w-full p-4 pt-2 pb-4">
+      <ScrollArea className="w-full p-4 pt-2 pb-4 overflow-x-auto">
 
         <div className="flex gap-4">
 
