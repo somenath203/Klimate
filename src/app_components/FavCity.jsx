@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useFavouriteCity } from "@/hooks/use-favoruite-city";
-import { ScrollArea } from "@/components/ui/scroll-area";
+
 import FavCityCard from "./FavCityCard";
+
 
 const FavCity = () => {
 
@@ -25,23 +26,19 @@ const FavCity = () => {
         onClick={() => removeAllFavCities.mutate()}
       >Remove All Favourites</Button>
 
-      <ScrollArea className="w-full pb-4">
+      <div className="w-full pb-4 flex items-center gap-3 overflow-x-auto">
 
-        <div className="flex gap-4">
+        {favCities?.length > 0 && favCities?.map((favCity) => (
 
-          {favCities?.length > 0 && favCities?.map((favCity) => (
+          <FavCityCard 
+            key={favCity.id} 
+            {...favCity}
+            onRemoveFav={() => removeParticularFav.mutate(favCity.id)}
+          />
 
-            <FavCityCard 
-              key={favCity.id} 
-              {...favCity}
-              onRemoveFav={() => removeParticularFav.mutate(favCity.id)}
-            />
+        ))}
 
-          ))}
-
-        </div>
-
-      </ScrollArea>
+      </div>
 
     </>
   )
