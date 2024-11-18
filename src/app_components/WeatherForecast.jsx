@@ -50,7 +50,7 @@ const WeatherForecast = ({ forecastData }) => {
 
 
       <CardHeader>
-        <CardTitle>Next 5 Day Forecast</CardTitle>
+        <CardTitle>5 Day Forecast</CardTitle>
       </CardHeader>
 
 
