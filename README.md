@@ -40,7 +40,7 @@ Klimate is a web app that gives you detailed weather information for your locati
 - **ShadCN UI**: For styling and UI components.
 - **TailwindCSS**: For modern and responsive design.
 - **TanStack Query**: For efficient data fetching and state management.
-- **OpenWeather API**: To fetch real-time weather data.
+- **OpenWeatherMap API**: To fetch real-time weather data.
 - **Recharts**: For creating interactive temperature graphs.
 
 ---
